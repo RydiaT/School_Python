@@ -1,10 +1,11 @@
 from nltk.corpus import brown
 from random import choice as randidx
 from random import randint
+storage_txt = 'word_bot\sentences.txt'
 
 word_list = brown.words()
 punctuation = [".", "!", "?"]
-banned_words = [",", ".", "!", "''", "``", "(", ")", "--", "?"]
+banned_words = [",", ".", "!", "''", "``", "(", ")", "--", "?", ":", ":"]
 
 def generate_word():
     word = randidx(word_list)
@@ -37,6 +38,6 @@ def generate_sentences():
     sentence += randidx(punctuation)
     result = sentence.capitalize()
 
-    file = open("sentences.txt", "a")
+    file = open(storage_txt, "a")
     file.write("\n" + result)
     file.close()
