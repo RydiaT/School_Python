@@ -2,7 +2,7 @@ from sentence_generator import generate_sentences
 from haiku_bot import generate_haiku
 
 storage_txt = 'word_bot\sentences.txt'
-
+print("Welcome to Word_Bot!\n")
 print("Mode 1: 5 Random Sentences\nMode 2: 1 Random Haiku")
 mode = input("Mode 1 or Mode 2?")
 
