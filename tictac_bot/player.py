@@ -14,7 +14,10 @@ def play(board):
     if target_i > len(board) or target_j > len(board):
         print("That is an invalid play.")
         play(board)
-    
+    elif board[target_i][target_j] != ' ':
+        print("Someone already played there.")
+        play(board)
+        
     board[target_i][target_j] = "X"
 
     return board
