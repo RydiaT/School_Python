@@ -1,5 +1,5 @@
 from player import play
-from enemy import enemy_play
+from enemy import enemy_play, checkWin
 
 def write_to_log(str):
     file = open("log_history.txt", "a")
@@ -41,10 +41,24 @@ def setup_board(size):
 
     while True:
         board = play(board)
+
         if not board:
             print("Goodbye")
             break
-        # print(board)
-        board = enemy_play(board)
-        # print(board)
+
         print(draw_board(board))
+
+        if checkWin(board, "X"):
+            print("You won! Congrats!")
+            break
+
+        board = enemy_play(board)
+
+        if checkWin(board, "O"):
+            print("You lost! Darn!")
+            break
+        
+        print(draw_board(board))
+
+
+        
