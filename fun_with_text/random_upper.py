@@ -1,7 +1,10 @@
 from random import randint
 
-def random_upper():
-    sentence = input("Give me a sentence to make sarcastic: ")
+def random_upper(user_input = ''):
+    if user_input == '':
+        sentence = input("Give me a sentence to make sarcastic: ")
+    else:
+        sentence = user_input
     result = ''
 
     sentence = sentence.lower()
