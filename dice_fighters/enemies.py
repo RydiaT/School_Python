@@ -6,3 +6,8 @@ def get_area_enemies(area):
         enemies = [slime, rabbit]
     
     return [enemies, next_area]
+
+def battle_loop(enemy, player):
+    enemy_hp = enemy[0]
+    player_hp = player[0]
+

@@ -10,3 +10,8 @@ player = setup_player()
 avaliable_enemies = get_area_enemies(1)
 
 print(f"{player[0]}, it is time to begin your adventure. Don't die.")
+
+print(f'It is time for your first battle against a... slime. If you lose this, you\'re not allowed back home.')
+
+currentEnemy = avaliable_enemies[0][0]
+
